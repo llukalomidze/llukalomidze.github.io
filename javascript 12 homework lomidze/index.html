@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Todo App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <h1 class="logo">Todo</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#all" data-filter="all" class="nav-link active">All</a>
+        <a href="#active" data-filter="active" class="nav-link">Active</a>
+        <a href="#completed" data-filter="completed" class="nav-link">Completed</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="app-main container">
+    <section class="todo-card">
+      <form id="todo-form" class="todo-form" aria-label="Add todo">
+        <input id="todo-input" class="todo-input" type="text" placeholder="Add a new task" aria-label="New task" />
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <div class="todo-footer">
+        <span id="items-left" class="items-left">0 items left</span>
+        <div class="footer-actions">
+          <button data-filter="all" class="filter-btn active">All</button>
+          <button data-filter="active" class="filter-btn">Active</button>
+          <button data-filter="completed" class="filter-btn">Completed</button>
+        </div>
+        <button id="clear-completed" class="btn btn-ghost">Clear Completed</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container footer-inner">
+      <span>© <strong>Simple Todo</strong> 2026</span>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
